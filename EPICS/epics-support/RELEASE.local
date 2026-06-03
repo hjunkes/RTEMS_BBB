@@ -1,0 +1,29 @@
+#
+# can not use ${HOME} due to auto generation on
+# some submodules
+SUPPORT=/Volumes/Epics/RTEMS_BBB/EPICS/epics-support
+
+#  IPAC is only necessary if support for Greensprings IP488 is required
+#  IPAC release V2-7 or later is required.
+#IPAC=$(SUPPORT)/ipac
+
+# SEQ is required for testIPServer
+SNCSEQ=$(SUPPORT)/sequencer
+
+# If CALC was built with SSCAN support then SSCAN must be defined for testEpicsApp
+SSCAN=$(SUPPORT)/sscan
+
+# For sCalcout support in asynOctet - applications include asynCalc.dbd
+CALC=$(SUPPORT)/calc
+
+ASYN=$(SUPPORT)/asyn
+AUTOSAVE=$(SUPPORT)/autosave
+
+IOCSTATS=$(SUPPORT)/iocStats
+IOCSTATSDB=$(SUPPORT)/iocstatsdb
+
+RECCASTER=$(SUPPORT)/recsync/client
+
+#  EPICS_BASE 3.14.6 or later is required
+EPICS_BASE=/Volumes/Epics/RTEMS_BBB/EPICS/epics-base
+

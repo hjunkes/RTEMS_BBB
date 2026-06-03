@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [[ $# -ne 2 ]]; then
+    echo "usage $0 architecture (e.g. arm, powerpc) bsp (eg. beatnik, beagleboneblack)" >&2
+    exit 2
+fi
+
+#RTEMS development
+export RTEMS_VERSION=7
+export RTEMS_RELEASE=7
+export RTEMS_CPU=$1
+export RTEMS_BSP=$2
+export RTEMS_ARCH=${RTEMS_CPU}-rtems${RTEMS_VERSION}
+SCRIPT=$(readlink -f $0)
+export RTEMS_ROOT=`dirname $SCRIPT`/rtems/${RTEMS_RELEASE}
+
+
+git clone https://gitlab.rtems.org/rtems/pkg/rtems-net-services.git
+cd rtems-net-services
+git submodule init
+git submodule update
+
+./waf configure --prefix=${RTEMS_ROOT}
+./waf
+./waf install

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+if [[ $# -ne 2 ]]; then
+    echo "usage $0 architecture (e.g. arm, powerpc) bsp (eg. beatnik, beagleboneblack)" >&2
+    exit 2
+fi
+
+#RTEMS development
+export RTEMS_VERSION=7
+export RTEMS_RELEASE=7
+export RTEMS_CPU=$1
+export RTEMS_BSP=$2
+export RTEMS_ARCH=${RTEMS_CPU}-rtems${RTEMS_VERSION}
+SCRIPT=$(readlink -f $0)
+export RTEMS_ROOT=`dirname $SCRIPT`/rtems/${RTEMS_RELEASE}
+
+
+export CPPFLAGS="-I$(brew --prefix ncurses)/include"
+export LDFLAGS="-L$(brew --prefix ncurses)/lib"
+export PKG_CONFIG_PATH="$(brew --prefix ncurses)/lib/pkgconfig"
+
+echo "install rsb and rtems tools"
+git clone https://gitlab.rtems.org/rtems/tools/rtems-source-builder.git rsb
+cd rsb
+git checkout remotes/origin/${RTEMS_RELEASE}
+cd rtems
+../source-builder/sb-check
+if [ $? -ne 0 ]; then
+    echo "sb check failed"
+    exit
+fi
+echo "... check ok ... proceed ..."
+../source-builder/sb-set-builder --list-bsets
+echo "... building tool set for " ${RTEMS_CPU}
+../source-builder/sb-set-builder --jobs=20 --prefix=${RTEMS_ROOT} ${RTEMS_VERSION}/rtems-${RTEMS_CPU}
+if [ $? -ne 0 ]; then
+    echo "building failed"
+    exit
+fi

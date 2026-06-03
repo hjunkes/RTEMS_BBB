@@ -1,0 +1,51 @@
+[submodule "asyn"]
+	path = asyn
+	url = https://github.com/epics-modules/asyn
+[submodule "autosave"]
+	path = autosave
+	url = https://github.com/epics-modules/autosave
+[submodule "sscan"]
+	path = sscan
+	url = https://github.com/epics-modules/sscan
+[submodule "busy"]
+	path = busy
+	url = https://github.com/epics-modules/busy
+[submodule "calc"]
+	path = calc
+	url = https://github.com/epics-modules/calc
+[submodule "recsync"]
+	path = recsync
+	url = https://github.com/ChannelFinder/recsync
+[submodule "devlib2"]
+	path = devlib2
+	url = https://github.com/epics-modules/devlib2
+[submodule "ip"]
+	path = ip
+	url = https://github.com/epics-modules/ip
+[submodule "vme"]
+	path = vme
+	url = https://github.com/epics-modules/vme
+[submodule "ipac"]
+	path = ipac
+	url = https://github.com/epics-modules/ipac
+[submodule "motor"]
+	path = motor
+	url = https://github.com/epics-modules/motor
+[submodule "StreamDevice"]
+	path = StreamDevice
+	url = https://github.com/paulscherrerinstitute/StreamDevice
+[submodule "modbus"]
+	path = modbus
+	url = https://github.com/epics-modules/modbus
+[submodule "scaler"]
+	path = scaler
+	url = https://github.com/epics-modules/scaler
+[submodule "iocStats"]
+	path = iocStats
+	url = https://github.com/epics-modules/iocStats.git
+[submodule "iocstatsdb"]
+	path = iocstatsdb
+	url = https://gitlab.fhi.mpg.de/epics-tools/iocstatsdb.git
+[submodule "seq"]
+	path = seq
+	url = https://github.com/epics-modules/sequencer/

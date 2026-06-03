@@ -1,0 +1,43 @@
+#!/bin/bash
+
+if [[ $# -ne 2 ]]; then
+    echo "usage $0 architecture (e.g. arm, powerpc) bsp (eg. beatnik, beagleboneblack)" >&2
+    exit 2
+fi
+
+#RTEMS development
+export RTEMS_VERSION=7
+export RTEMS_RELEASE=7
+export RTEMS_CPU=$1
+export RTEMS_BSP=$2
+export RTEMS_ARCH=${RTEMS_CPU}-rtems${RTEMS_VERSION}
+SCRIPT=$(readlink -f $0)
+export RTEMS_ROOT=`dirname $SCRIPT`/rtems/${RTEMS_RELEASE}
+
+git clone https://gitlab.rtems.org/rtems/rtos/rtems.git kernel
+cd kernel
+./waf bspdefaults --rtems-bsps=${RTEMS_CPU}/${RTEMS_BSP} > config.ini
+sed -i '' \
+-e "s|RTEMS_POSIX_API = False|RTEMS_POSIX_API = True|" \
+-e "s|BUILD_TESTS = False|BUILD_TESTS = True|" \
+config.ini
+./waf distclean
+./waf configure --prefix=${RTEMS_ROOT}
+./waf
+./waf install
+
+
+# 29.5.26
+# diff --git a/cpukit/libmisc/rtems-fdt/rtems-fdt.c b/cpukit/libmisc/rtems-fdt/rtems-fdt.c
+#index 593fccfc6c..5ccc05c5c7 100644
+#--- a/cpukit/libmisc/rtems-fdt/rtems-fdt.c
+#+++ b/cpukit/libmisc/rtems-fdt/rtems-fdt.c
+#@@ -589,7 +589,7 @@ int rtems_fdt_unload( rtems_fdt_handle *handle )
+#
+#   fdt = rtems_fdt_lock();
+#
+#-  if ( !rtems_fdt_valid_handle_unprotected( handle ) ) {
+#+  if ( !rtems_fdt_valid_handle_unprotected( handle, fdt ) ) {
+#     rtems_fdt_unlock( fdt );
+#     return -RTEMS_FDT_ERR_INVALID_HANDLE;
+#   }
