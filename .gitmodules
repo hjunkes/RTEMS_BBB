@@ -1,21 +1,21 @@
 [submodule "kernel"]
 	path = kernel
-	url = git@gitlab.fhi.mpg.de:rtems_epics/bbb_rtems7_epics7/kernel.git
+	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/kernel.git
 [submodule "rtems-libbsd"]
 	path = rtems-libbsd
-	url = git@gitlab.fhi.mpg.de:rtems_epics/bbb_rtems7_epics7/rtems-libbsd.git
+	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/rtems-libbsd.git
 [submodule "EPICS/epics-base"]
 	path = EPICS/epics-base
-	url = git@gitlab.fhi.mpg.de:rtems_epics/bbb_rtems7_epics7/epics-base.git
+	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/epics-base.git
 [submodule "EPICS/epics-support/iocStats"]
 	path = EPICS/epics-support/iocStats
-	url = git@gitlab.fhi.mpg.de:rtems_epics/bbb_rtems7_epics7/iocStats.git
+	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/iocStats.git
 [submodule "EPICS/epics-support/sscan"]
 	path = EPICS/epics-support/sscan
-	url = git@gitlab.fhi.mpg.de:rtems_epics/bbb_rtems7_epics7/sscan.git
+	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/sscan.git
 [submodule "EPICS/FHI/beaglePyroIOC"]
 	path = EPICS/FHI/beaglePyroIOC
-	url = git@gitlab.fhi.mpg.de:rtems_epics/bbb_rtems7_epics7/beaglepyroioc.git
+	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/beaglepyroioc.git
 [submodule "EPICS/epics-support/iocstatsdb"]
 	path = EPICS/epics-support/iocstatsdb
 	url = https://gitlab.fhi.mpg.de/epics-tools/iocstatsdb.git
