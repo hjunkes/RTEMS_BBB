@@ -1,21 +1,21 @@
 [submodule "kernel"]
 	path = kernel
-	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/kernel.git
+	url = https://github.com/hjunkes/kernel.git
 [submodule "rtems-libbsd"]
 	path = rtems-libbsd
-	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/rtems-libbsd.git
+	url = https://github.com/hjunkes/rtems-libbsd.git
 [submodule "EPICS/epics-base"]
 	path = EPICS/epics-base
-	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/epics-base.git
+	url = https://github.com/hjunkes/epics-base.git
 [submodule "EPICS/epics-support/iocStats"]
 	path = EPICS/epics-support/iocStats
-	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/iocStats.git
+	url = https://github.com/hjunkes/iocStats.git
 [submodule "EPICS/epics-support/sscan"]
 	path = EPICS/epics-support/sscan
-	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/sscan.git
+	url = https://github.com/hjunkes/sscan.git
 [submodule "EPICS/FHI/beaglePyroIOC"]
 	path = EPICS/FHI/beaglePyroIOC
-	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/beaglepyroioc.git
+	url = https://github.com/hjunkes/beaglePyroIOC.git
 [submodule "EPICS/epics-support/iocstatsdb"]
 	path = EPICS/epics-support/iocstatsdb
 	url = https://gitlab.fhi.mpg.de/epics-tools/iocstatsdb.git
@@ -36,4 +36,4 @@
 	url = https://github.com/ChannelFinder/recsync.git
 [submodule "EPICS/epics-support/pvxs"]
 	path = EPICS/epics-support/pvxs
-	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/pvxs.git
+	url = https://github.com/hjunkes/pvxs.git
