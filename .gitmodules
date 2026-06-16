@@ -31,21 +31,9 @@
 [submodule "EPICS/epics-support/sequencer"]
 	path = EPICS/epics-support/sequencer
 	url = https://github.com/epics-modules/sequencer.git
-[submodule "EPICS/epics-support/asyn"]
-	path = EPICS/epics-support/asyn
-	url = https://github.com/epics-modules/asyn.git
-[submodule "EPICS/epics-support/autosave"]
-	path = EPICS/epics-support/autosave
-	url = https://github.com/epics-modules/autosave.git
-[submodule "EPICS/epics-support/calc"]
-	path = EPICS/epics-support/calc
-	url = https://github.com/epics-modules/calc.git
-[submodule "EPICS/epics-support/sequencer"]
-	path = EPICS/epics-support/sequencer
-	url = https://github.com/epics-modules/sequencer.git
 [submodule "EPICS/epics-support/recsync"]
 	path = EPICS/epics-support/recsync
-	url = https://github.com/ChannelFinder/recsync.git 
+	url = https://github.com/ChannelFinder/recsync.git
 [submodule "EPICS/epics-support/pvxs"]
 	path = EPICS/epics-support/pvxs
 	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/pvxs.git
