@@ -24,6 +24,8 @@ IOCSTATSDB=$(SUPPORT)/iocstatsdb
 
 RECCASTER=$(SUPPORT)/recsync/client
 
+PVXS=$(SUPPORT)/pvxs
+
 #  EPICS_BASE 3.14.6 or later is required
 EPICS_BASE=/Volumes/Epics/RTEMS_BBB/EPICS/epics-base
 

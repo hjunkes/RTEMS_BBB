@@ -46,3 +46,6 @@
 [submodule "EPICS/epics-support/recsync"]
 	path = EPICS/epics-support/recsync
 	url = https://github.com/ChannelFinder/recsync.git 
+[submodule "EPICS/epics-support/pvxs"]
+	path = EPICS/epics-support/pvxs
+	url = git@gitlab:rtems_epics/bbb_rtems7_epics7/pvxs.git
